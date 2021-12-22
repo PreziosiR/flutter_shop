@@ -11,9 +11,7 @@ class Core extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Shop",
-      home: Scaffold(
-        body: HomeScreen(),
-      ),
-    );
+      home: HomeScreen(),
+      );
   }
 }
