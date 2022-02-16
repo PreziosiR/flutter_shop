@@ -4,8 +4,8 @@ import 'package:flutter_shop/models/Products.dart';
 import '../../../../constants.dart';
 import 'color_dot.dart';
 
-class ColorAndSize extends StatelessWidget {
-  const ColorAndSize({
+class ArticleColorSelector extends StatelessWidget {
+  const ArticleColorSelector({
     Key? key,
     required this.product,
   }) : super(key: key);

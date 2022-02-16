@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shop/constants.dart';
 import 'package:flutter_shop/models/Products.dart';
 
-import 'color_and_size.dart';
+import 'add_to_cart.dart';
+import 'article_color_selector.dart';
+import 'counter_with_fav_button.dart';
+import 'description.dart';
 import 'product_title_with_image.dart';
 
 class Body extends StatelessWidget {
@@ -26,14 +29,18 @@ class Body extends StatelessWidget {
                       top: size.height * 0.12,
                       left: kDefaultPaddin,
                       right: kDefaultPaddin),
-                  // height: 500,
                   decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(24),
                           topRight: Radius.circular(24))),
                   child: Column(
-                    children: [ColorAndSize(product: product)],
+                    children: [
+                      ArticleColorSelector(product: product),
+                      Description(product: product),
+                      const CounterWithFavButton(),
+                      AddToCart(product: product)
+                    ],
                   ),
                 ),
                 ProductTitleWithImage(product: product)
